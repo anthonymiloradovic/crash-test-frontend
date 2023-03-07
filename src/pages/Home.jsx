@@ -1,11 +1,18 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import CitySelector from '../components/CitySelector';
+
 
 const Home = () => {
+    
     return (
         <div>
             <Navbar/>
-            home
+            <Hero/>
+            <div>
+     <CitySelector />
+    </div>
         </div>
     );
 };

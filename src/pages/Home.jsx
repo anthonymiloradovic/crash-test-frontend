@@ -9,7 +9,7 @@ const Home = () => {
       </Parallax>
     );
   };
-  
-  
+
+
 
 export default Home;

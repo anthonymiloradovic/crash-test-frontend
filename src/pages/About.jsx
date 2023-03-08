@@ -8,7 +8,7 @@ const About = () => {
 
         <div>
             <Navbar />
-           about 
+           about
         </div>
     );
 };

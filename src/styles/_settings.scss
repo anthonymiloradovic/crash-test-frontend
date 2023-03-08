@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+    h1 {
+        font-size: 3em;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+body {
+    padding: 0 240px; /* ajoute une marge de 20px sur les côtés */
+  }
+  

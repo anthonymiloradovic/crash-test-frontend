@@ -1,20 +1,15 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import CitySelector from '../components/CitySelector';
-
+import Parallax from '../components/Parallax';
 
 const Home = () => {
-    
     return (
-        <div>
-            <Navbar/>
-            <Hero/>
-            <div>
-     <CitySelector />
-    </div>
-        </div>
+      <Parallax>
+        <Navbar className="navbar__parallax"/>
+      </Parallax>
     );
-};
+  };
+  
+  
 
 export default Home;

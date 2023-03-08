@@ -3,26 +3,23 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-
-        <nav className="navbar">
+      <nav className="navbar">
         <ul className="navbar__list">
-
-            <li>
+          <li>
             <NavLink to="/">
-                <img className="logo" src="./public/logo.png" alt="logo" />
+              <img className="logo" src="./public/logo2.png" alt="logo" />
             </NavLink>
-            </li>
-        <li>
-
-                    <NavLink to="/">Accueil--</NavLink>
-                </li>
-               <li>
-                    <NavLink to="/about">A propos--</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/profil">Profil</NavLink>
-                </li>
-
+          </li>
+          <li>
+            <ul className="navbar__link">
+              <li>
+                <NavLink to="/">Accueil</NavLink>
+              </li>
+              <li>
+                <NavLink to="/about">A propos</NavLink>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
 

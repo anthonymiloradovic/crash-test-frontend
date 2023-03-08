@@ -14,15 +14,18 @@ const Navbar = () => {
             </li>
         <li>
 
-                    <NavLink to="/">Accueil</NavLink>
+                    <NavLink to="/">Accueil--</NavLink>
+                </li>
+               <li>
+                    <NavLink to="/about">A propos--</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about">A propos</NavLink>
+                    <NavLink to="/profil">Profil</NavLink>
                 </li>
-               
+
         </ul>
       </nav>
-       
+
     );
 };
 

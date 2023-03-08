@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    // background-image: url('/public/stars.jpg');
+    background-color: #97bce1;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.header-img {
+    width: 100%;
+    padding-top: 12em;
+    z-index: 2;
+}
+
+.title-text {
+    position: fixed; 
+    padding-top: 1em;
+    font-size: 5em;
+    z-index: 1;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.main-text {
+    position: relative;
+    background-color: #fff;
+    color: #000;
+    padding: 2em 5em;
+    font-size: 1em;
+    z-index: 3;
+    min-height: 100vh; /* la hauteur minimale est égale à la hauteur de la fenêtre */
+  padding: 20px;
+}
+

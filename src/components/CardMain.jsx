@@ -1,9 +1,6 @@
-
-
-
 import { useState, useEffect } from "react";
+import { ChakraProvider, Box, Text, Image, Heading, Button } from "@chakra-ui/react";
 import './cardmain.css';
-
 
 const cities = [
   "Paris", "Bordeaux", "Lille", "Barcelone", "Berlin", "Londres",
@@ -14,7 +11,7 @@ const cities = [
   "Johannesburg", "Istanbul"
 ];
 
-function Card() {
+function CardMain() {
   const [city, setCity] = useState("");
   const [cards, setCards] = useState([]);
 
@@ -49,47 +46,57 @@ function Card() {
       const randomCity = cities[Math.floor(Math.random() * cities.length)];
       const includeCard = randomCity.toLowerCase().includes(city.toLowerCase());
       return includeCard && (
-        <div
+        <Box
           className="card"
           key={i}
           data-city={randomCity}
           onClick={() => setCity(randomCity)}
+          boxShadow="md"
+          borderRadius="md"
+          p={4}
+          cursor="pointer"
+          _hover={{
+            boxShadow: "lg"
+          }}
         >
-          <img
+          <Image
             src="https://mmf.logic-immo.com/mmf/ads/photo-crop-368x250/63b/f/f22a4eaa-dcf2-468d-922a-487915a231c0.jpg"
-            className="<card-img-top>"
             alt="Maison"
-            style={{ width: "100%", height: "60%" }}
-
+            objectFit="cover"
+            h="60%"
+            borderRadius="md"
           />
-          <div className="card-body">
-            <h5 className="card-title">Maison Piscine à vendre à  {randomCity} </h5>
-            <p className="card-text">1 000000 €.</p>
-           <a href="#" className="btn btn-primary">
+          <Box mt={4}>
+            <Heading as="h5" size="md">Maison Piscine à vendre à  {randomCity} </Heading>
+            <Text color="gray.500" fontSize="sm">1 000000 €.</Text>
+            <Button colorScheme="blue" size="sm" mt={2}>
               En savoir plus
-            </a>
-          </div>
-        </div>
+            </Button>
+          </Box>
+        </Box>
       );
     });
     setCards(newCards);
   }, [city]);
-  
 
   return (
-    <div>
-      <label htmlFor="search">Recherche de ville :</label>
-      <input
-        type="text"
-        id="search"
-        value={city}
-      
-        onChange={(e) => setCity(e.target.value)}
-      />
+    <ChakraProvider>
+      <Box>
+        <label htmlFor="search">Recherche de ville :</label>
+        <input
+          type="text"
+          id="search"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        />
+  
+        <Box id="cards-container" display="flex" flexWrap="wrap" justifyContent="center" mt={6}>
+          {cards}
+        </Box>
+      </Box>
+    </ChakraProvider>
+  );
 
-<div id="cards-container">{cards}</div>
-</div>
-);
 }
 
-export default Card;
+export default CardMain;
